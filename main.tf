@@ -42,4 +42,5 @@ resource "aws_elasticache_replication_group" "main" {
   parameter_group_name       = "default.redis6.x.cluster.on"
   security_group_ids         = [aws_security_group.main.id]
   kms_key_id                 = var.kms_key_arn
+  storage_encrypted          = true
 }
